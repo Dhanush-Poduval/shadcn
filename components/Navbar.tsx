@@ -20,13 +20,14 @@ import { SidebarTrigger } from './ui/sidebar'
 function Navbar() {
     const {setTheme}=useTheme()
   return (
+    
         <nav className='w-full px-4 py-2 border-b ml-0'>
-                <div className='w-auto max-w-7xl mx-auto flex justify-between items-center ml-0'>
+                <div className='w-auto max-w-7xl mx-auto flex justify-between items-center ml-5'>
                     {/* Left */}
                     <SidebarTrigger className='ml-0'/>
 
                     {/* Right */}
-                    <div className='flex items-center gap-3'>
+                    <div className='flex items-center  gap-3'>
                     <Link href='/' className='text-sm font-medium'>Dashboard</Link>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
@@ -48,6 +49,7 @@ function Navbar() {
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
+                    
                     
 
                     <DropdownMenu>
