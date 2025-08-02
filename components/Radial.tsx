@@ -38,11 +38,13 @@ const chartConfig = {
 
 export function ChartRadarDots() {
   return (
-   
-        <ChartContainer
+         <div>
+          <h1>Popularity</h1>
+            <ChartContainer
           config={chartConfig}
           className=" aspect-square max-h-[400px] mt-20"
         >
+          
           <RadarChart data={chartData} className="size-1">
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <PolarAngleAxis dataKey="month" />
@@ -60,6 +62,9 @@ export function ChartRadarDots() {
           </RadarChart>
            
         </ChartContainer>
+
+         </div>
+      
         
        
   )

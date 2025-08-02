@@ -36,7 +36,9 @@ export default function Todolist() {
             
         </div>
         <ScrollArea className='max-h-[400px] overflow-y-auto flex flex-row gap-4 '>
+            <CardTitle className='mb-5'>To do list</CardTitle>
             {checked.map((ischecked , index)=>(
+                
                 <Card key={index}>
                     <div className='flex gap-3 ml-3'>
                         <Checkbox 
