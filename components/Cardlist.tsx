@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardContent, CardFooter, CardTitle } from './ui/card';
 import Image from 'next/image';
 import { Badge } from './ui/badge';
+import { ScrollArea } from './ui/scroll-area';
 
 const popularContent = [
   {
@@ -93,8 +94,9 @@ const Cardlist=({title}:{title:string})=>{
     const list=title=='Popular Content'?popularContent:latestTransactions
   return (
     <div>
-        <h1 className='text-ld font-bold mb-5'>{title}</h1>
-        <div className='flex flex-col gap-2'>
+       <ScrollArea className='overflow-y-auto'>
+          <h1 className='text-ld font-bold mb-5'>{title}</h1>
+        <div className='flex flex-col gap-2 max-h-[400px]'>
             {list.map((item)=>(
                 <Card key={item.id} className='flex-row gap-4 items-center justify-between'>
                     <div className='relative w-12 h-12 rounded-sm overflow-hidden ml-3'>
@@ -113,6 +115,9 @@ const Cardlist=({title}:{title:string})=>{
 
             ))}
         </div>
+
+       </ScrollArea>
+       
     </div>
   )
 }

@@ -47,7 +47,7 @@ async function AppSidebar() {
                 <SidebarMenuItem>
                     <SidebarMenuButton asChild>
                         <Link href="/">
-                       <Image  src='/logo.svg' alt="Logo" width={20} height={20}/>
+                       <Image src="https://avatars.githubusercontent.com/u/71214249?v=4" alt="Logo" width={20} height={20}/>
                        <span>Dhanush</span>
                         
                         </Link>
